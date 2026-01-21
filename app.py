@@ -27,7 +27,7 @@ if uploaded_image and caption_generator:
         image = Image.open(uploaded_image).convert('RGB')
         st.image(image, use_container_width=True)
         result = captioning_model(image)
-        gen_text = result[0]['generate_text']
+        gen_text = result[0]['generated_text']
         st.markdown(gen_text)
 
 elif uploaded_image:
